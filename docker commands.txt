@@ -1,0 +1,12 @@
+
+docker run --name ecommerce-postgres1 -d -p 9000:5432 -e POSTGRES_PASSWORD=password123 postgres:latest
+
+docker start <container id>
+
+docker exec -it ecommerce-postgresdb-1 bash
+psql -U postgres
+CREATE DATABASE ecommerce;
+\c ecommerce
+
+docker build -t technicaltest-ecommerce .
+docker run --name ecommerce-spring-boot -d -p 8080:8080 technicaltest-ecommerce

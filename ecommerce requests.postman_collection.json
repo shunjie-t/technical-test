@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "0f0d9200-8304-467a-9cf9-47756f0d73ab",
+		"name": "ecommerce requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28176877"
+	},
+	"item": [
+		{
+			"name": "display caterlog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/merchandise/retrieve"
+			},
+			"response": []
+		},
+		{
+			"name": "add merchandise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"merchandiseName\": \"Chocolate\",\r\n        \"merchandiseDescription\": \"Cadbury dairy milk 200g\",\r\n        \"merchandisePrice\": 4.20,\r\n        \"merchandiseImage\": \"http://dummyimage.com/217x100.png/cc0000/ffffff\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/merchandise/add"
+			},
+			"response": []
+		},
+		{
+			"name": "update merchandise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"merchandiseId\": 1,\r\n        \"merchandiseName\": \"Beer\",\r\n        \"merchandiseDescription\": \"Heineken\",\r\n        \"merchandisePrice\": 11.80\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/merchandise/update"
+			},
+			"response": []
+		},
+		{
+			"name": "remove merchandise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"merchandiseId\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/merchandise/remove"
+			},
+			"response": []
+		}
+	]
+}
